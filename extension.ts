@@ -336,7 +336,7 @@ claude() {
           line="$translated"
         fi
       fi
-      printf '%s\\n' "$line" >> "$TMPFILE"
+      printf '%s\\nPlease respond in Brazilian Portuguese (pt-BR).\\n' "$line" >> "$TMPFILE"
     done
     command claude < "$TMPFILE"
     rm -f "$TMPFILE"

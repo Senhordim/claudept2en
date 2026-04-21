@@ -166,4 +166,9 @@ describe("generateBashFunction", () => {
     assert.ok(out.includes(MARKER_START));
     assert.ok(out.includes(MARKER_END));
   });
+
+  it("appends pt-BR response instruction to each prompt", () => {
+    const out = generateBashFunction("http://localhost:5000", "");
+    assert.ok(out.includes("Please respond in Brazilian Portuguese (pt-BR)"));
+  });
 });
