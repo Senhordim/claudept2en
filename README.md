@@ -2,6 +2,9 @@
 
 Extensão VSCode que intercepta prompts em português digitados no Claude Code e os traduz automaticamente para inglês antes de enviar — **sem interromper o fluxo de trabalho**.
 
+> **💡 Por que traduzir para o inglês?**
+> A tokenização de textos em inglês feita pelos modelos de IA (LLMs) é significativamente mais eficiente. Enviar seus prompts em inglês **economiza tokens**, reduzindo os custos de consumo da API e frequentemente resultando em respostas de melhor qualidade e maior velocidade de processamento, enquanto você continua mantendo a comodidade de digitar em português.
+
 ---
 
 ## Como funciona
