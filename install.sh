@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ─────────────────────────────────────────────────────────────────
-# install.sh — Instalação standalone do Claude PT→EN Translator
+# install.sh — Instalação standalone do claudept2en
 # Não requer a extensão VSCode; injeta direto no .bashrc/.zshrc
 # ─────────────────────────────────────────────────────────────────
 set -euo pipefail
@@ -8,8 +8,8 @@ set -euo pipefail
 LIBRE_URL="${1:-http://localhost:5000}"
 LIBRE_KEY="${2:-}"
 
-MARKER_START="# ── Claude PT→EN Translator (auto-injected by VSCode extension) ──"
-MARKER_END="# ── end Claude PT→EN ──"
+MARKER_START="# ── claudept2en (auto-injected by VSCode extension) ──"
+MARKER_END="# ── end claudept2en ──"
 
 KEY_PARAM=""
 [ -n "$LIBRE_KEY" ] && KEY_PARAM=", \"api_key\": \"$LIBRE_KEY\""
@@ -75,7 +75,7 @@ inject_into_rc() {
 }
 
 echo ""
-echo "🌐 Claude PT→EN Translator — Instalador"
+echo "🌐 claudept2en — Instalador"
 echo "  LibreTranslate URL: $LIBRE_URL"
 echo ""
 

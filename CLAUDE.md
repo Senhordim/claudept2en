@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this project is
 
-A VS Code extension (**Claude PT→EN Translator**) that intercepts Portuguese prompts typed in Claude Code terminals and translates them to English via LibreTranslate before they reach the model. It also ships a standalone `install.sh` for users who don't use VS Code.
+A VS Code extension (**claudept2en**) that intercepts Portuguese prompts typed in Claude Code terminals and translates them to English via LibreTranslate before they reach the model. It also ships a standalone `install.sh` for users who don't use VS Code.
 
 ## Commands
 
@@ -15,7 +15,7 @@ npm install          # install dev dependencies
 npm run compile      # compile extension.ts → out/extension.js
 npm run watch        # compile in watch mode
 npx vsce package     # build .vsix for distribution
-code --install-extension claude-pt-translator-1.0.0.vsix
+code --install-extension claudept2en-1.0.0.vsix
 ```
 
 Press **F5** inside VS Code (with the folder open) to launch an Extension Development Host.
@@ -71,7 +71,7 @@ The extension code in `extension.ts` also contains two *unused* alternative appr
 | `pyproject.toml` / `uv.lock` | Python environment with `libretranslate` dep (for local server) |
 | `main.py` | Stub — not part of the extension |
 
-### Config settings (all under `claudePtTranslator.*`)
+### Config settings (all under `claudePt2En.*`)
 
 | Key | Default | Purpose |
 |---|---|---|
@@ -85,9 +85,9 @@ The extension code in `extension.ts` also contains two *unused* alternative appr
 
 The injected block is always bounded by:
 ```
-# ── Claude PT→EN Translator (auto-injected by VSCode extension) ──
+# ── claudept2en (auto-injected by VSCode extension) ──
 ...
-# ── end Claude PT→EN ──
+# ── end claudept2en ──
 ```
 
 Both `extension.ts` and `install.sh` use these same markers so they are mutually compatible (installing one then the other won't create duplicate blocks).

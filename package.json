@@ -1,6 +1,6 @@
 {
-  "name": "claude-pt-translator",
-  "displayName": "Claude Code PT→EN Translator",
+  "name": "claudept2en",
+  "displayName": "claudept2en",
   "description": "Automatically translates Portuguese prompts to English before sending to Claude Code",
   "version": "1.0.0",
   "engines": { "vscode": "^1.85.0" },
@@ -10,54 +10,54 @@
   "contributes": {
     "commands": [
       {
-        "command": "claudePtTranslator.enable",
-        "title": "Claude PT→EN: Enable Translator"
+        "command": "claudePt2En.enable",
+        "title": "claudept2en: Enable Translator"
       },
       {
-        "command": "claudePtTranslator.disable",
-        "title": "Claude PT→EN: Disable Translator"
+        "command": "claudePt2En.disable",
+        "title": "claudept2en: Disable Translator"
       },
       {
-        "command": "claudePtTranslator.setLibreTranslateUrl",
-        "title": "Claude PT→EN: Set LibreTranslate URL"
+        "command": "claudePt2En.setLibreTranslateUrl",
+        "title": "claudept2en: Set LibreTranslate URL"
       },
       {
-        "command": "claudePtTranslator.translateSelection",
-        "title": "Claude PT→EN: Translate Selected Text"
+        "command": "claudePt2En.translateSelection",
+        "title": "claudept2en: Translate Selected Text"
       }
     ],
     "keybindings": [
       {
-        "command": "claudePtTranslator.translateSelection",
+        "command": "claudePt2En.translateSelection",
         "key": "ctrl+shift+t",
         "mac": "cmd+shift+t",
         "when": "editorTextFocus"
       }
     ],
     "configuration": {
-      "title": "Claude PT→EN Translator",
+      "title": "claudept2en Translator",
       "properties": {
-        "claudePtTranslator.enabled": {
+        "claudePt2En.enabled": {
           "type": "boolean",
           "default": true,
           "description": "Enable automatic PT→EN translation"
         },
-        "claudePtTranslator.libreTranslateUrl": {
+        "claudePt2En.libreTranslateUrl": {
           "type": "string",
           "default": "https://libretranslate.com",
           "description": "LibreTranslate server URL (use http://localhost:5000 for local)"
         },
-        "claudePtTranslator.libreTranslateApiKey": {
+        "claudePt2En.libreTranslateApiKey": {
           "type": "string",
           "default": "",
           "description": "LibreTranslate API key (leave empty if using local server)"
         },
-        "claudePtTranslator.showNotification": {
+        "claudePt2En.showNotification": {
           "type": "boolean",
           "default": true,
           "description": "Show notification when text is translated"
         },
-        "claudePtTranslator.wrapperScriptPath": {
+        "claudePt2En.wrapperScriptPath": {
           "type": "string",
           "default": "",
           "description": "Path to the generated wrapper script (auto-filled on setup)"

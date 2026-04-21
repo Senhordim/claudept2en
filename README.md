@@ -1,4 +1,4 @@
-# Claude Code PT→EN Translator
+# claudept2en
 
 Extensão VSCode que intercepta prompts em português digitados no Claude Code e os traduz automaticamente para inglês antes de enviar — **sem interromper o fluxo de trabalho**.
 
@@ -41,17 +41,17 @@ O servidor sobe em `http://localhost:5000`.
 **Opção A — Via VSIX (recomendado)**
 
 ```bash
-cd claude-pt-translator
+cd claudept2en
 npm install
 npm run compile
-npx vsce package          # gera claude-pt-translator-1.0.0.vsix
-code --install-extension claude-pt-translator-1.0.0.vsix
+npx vsce package          # gera claudept2en-1.0.0.vsix
+code --install-extension claudept2en-1.0.0.vsix
 ```
 
 **Opção B — Desenvolvimento direto**
 
 ```bash
-cd claude-pt-translator
+cd claudept2en
 npm install
 npm run compile
 # Abra a pasta no VSCode e pressione F5
@@ -62,7 +62,7 @@ npm run compile
 Abra a paleta de comandos (`Ctrl+Shift+P`) e execute:
 
 ```
-Claude PT→EN: Set LibreTranslate URL
+claudept2en: Set LibreTranslate URL
 ```
 
 - **Servidor local:**  `http://localhost:5000`
@@ -95,10 +95,10 @@ O texto em cinza mostra a tradução antes de ser enviada.
 
 | Comando | Descrição |
 |---------|-----------|
-| `Claude PT→EN: Enable Translator` | Ativa a tradução |
-| `Claude PT→EN: Disable Translator` | Desativa e remove o hook do shell |
-| `Claude PT→EN: Set LibreTranslate URL` | Configura o servidor |
-| `Claude PT→EN: Translate Selected Text` | Traduz texto selecionado no editor (`Ctrl+Shift+T`) |
+| `claudept2en: Enable Translator` | Ativa a tradução |
+| `claudept2en: Disable Translator` | Desativa e remove o hook do shell |
+| `claudept2en: Set LibreTranslate URL` | Configura o servidor |
+| `claudept2en: Translate Selected Text` | Traduz texto selecionado no editor (`Ctrl+Shift+T`) |
 
 ---
 
@@ -106,10 +106,10 @@ O texto em cinza mostra a tradução antes de ser enviada.
 
 ```json
 {
-  "claudePtTranslator.enabled": true,
-  "claudePtTranslator.libreTranslateUrl": "http://localhost:5000",
-  "claudePtTranslator.libreTranslateApiKey": "",
-  "claudePtTranslator.showNotification": true
+  "claudePt2En.enabled": true,
+  "claudePt2En.libreTranslateUrl": "http://localhost:5000",
+  "claudePt2En.libreTranslateApiKey": "",
+  "claudePt2En.showNotification": true
 }
 ```
 
@@ -132,8 +132,8 @@ Se não quiser rodar localmente, use `https://libretranslate.com` e registre uma
 
 ```json
 {
-  "claudePtTranslator.libreTranslateUrl": "https://libretranslate.com",
-  "claudePtTranslator.libreTranslateApiKey": "SUA_CHAVE_AQUI"
+  "claudePt2En.libreTranslateUrl": "https://libretranslate.com",
+  "claudePt2En.libreTranslateApiKey": "SUA_CHAVE_AQUI"
 }
 ```
 
@@ -142,7 +142,23 @@ Se não quiser rodar localmente, use `https://libretranslate.com` e registre uma
 ## Desinstalar
 
 ```
-Ctrl+Shift+P → Claude PT→EN: Disable Translator
+Ctrl+Shift+P → claudept2en: Disable Translator
 ```
 
 Isso remove o hook do `.bashrc` / `.zshrc`. Depois desinstale a extensão normalmente pelo VSCode.
+
+---
+
+## 🤝 Como contribuir
+
+Este projeto é open-source! Se você encontrou um bug, tem uma ideia para uma nova funcionalidade ou quer melhorar o código/documentação, toda contribuição é muito bem-vinda.
+
+### Passos para contribuir:
+
+1. Faça um **Fork** do projeto
+2. Crie uma branch para sua modificação (`git checkout -b feature/minha-nova-funcionalidade`)
+3. Faça o commit de suas alterações (`git commit -m 'Adiciona minha nova funcionalidade'`)
+4. Faça o push para a branch (`git push origin feature/minha-nova-funcionalidade`)
+5. Abra um **Pull Request**
+
+Se tiver dúvidas ou encontrar algum problema, sinta-se à vontade para abrir uma **Issue**.
