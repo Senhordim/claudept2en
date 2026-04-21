@@ -1,5 +1,6 @@
 {
   "name": "claudept2en",
+  "publisher": "Startamus",
   "displayName": "claudept2en",
   "description": "Automatically translates Portuguese prompts to English before sending to Claude Code",
   "version": "1.0.0",
@@ -71,7 +72,8 @@
   "scripts": {
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
-    "vscode:prepublish": "npm run compile"
+    "vscode:prepublish": "npm run compile",
+    "test": "npm run compile && node --test out/src/lib.test.js"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",

@@ -1,10 +1,21 @@
-# Python-generated files
+# Node
+node_modules/
+package-lock.json
+
+# TypeScript build output
+out/
+
+# VS Code extension packages
+*.vsix
+
+# Python artifacts (LibreTranslate local server)
 __pycache__/
 *.py[oc]
-build/
-dist/
-wheels/
-*.egg-info
-
-# Virtual environments
 .venv
+uv.lock
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/settings.json

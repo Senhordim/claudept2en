@@ -88,7 +88,7 @@ function looksLikePortuguese(text: string): boolean {
     /\b(para|com|por|sobre|entre|até|após|antes)\b/i,
     /\b(fazer|criar|adicionar|remover|alterar|verificar|mostrar|listar)\b/i,
     // accented characters common in Portuguese
-    /[ção]/,
+    /[çã]/,
     /[ãõ]/,
     /[áéíóúâêîôû]/,
   ];
