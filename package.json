@@ -3,10 +3,16 @@
   "publisher": "Startamus",
   "displayName": "claudept2en",
   "description": "Automatically translates Portuguese prompts to English before sending to Claude Code",
-  "version": "1.0.0",
-  "engines": { "vscode": "^1.85.0" },
-  "categories": ["Other"],
-  "activationEvents": ["onStartupFinished"],
+  "version": "1.0.1",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
